@@ -1,0 +1,58 @@
+$ go run cmd/client/client.go 
+2024-01-09 20:40:42     INFO    logger/logging.go:42    The following profiles are active: [default]
+2024-01-09 20:40:42     INFO    config/root_config.go:137       [Config Center] Config center doesn't start
+2024-01-09T20:40:42.813+0800    INFO    nacos_client/nacos_client.go:65 logDir:<C:\cygwin64\tmp\go-build1959249154\b001\exe\log> cacheDir:<C:\cygwin64\tmp\go-build1959249154\b001\exe\cache>
+2024-01-09 20:40:42     INFO    nacos/registry.go:279   [Nacos Registry] New nacos registry with url = map[host:127.0.0.1 port:8848 protocol:nacos registry:nacos registry.group:myGroup registry.label:true registry.namespace: registry.preferred:false registry.role:0 registry.timeout:5s registry.ttl:15m registry.weight:0 registry.zone: remote-client-name:dubbo.registries-nacos-127.0.0.1:8848 simplified:false]
+2024-01-09 20:40:42     INFO    nacos/builder.go:139    [Nacos Client] New nacos client with config = [{Scheme: ContextPath: IpAddr:127.0.0.1 Port:8848 GrpcPort:0}]
+2024-01-09 20:40:42     INFO    directory/directory.go:252      [Registry Directory] selector add service url{dubbo://192.168.123.192:20000/org.apache.dubbo.DubboDemoProvider.Test?accesslog=&app.version=myversion&application=myApp&auth=&bean.name=DubboDemoProvider&cluster=failover&config.tracing=&environment=pro&execute.limit=&execute.limit.rejected.handler=&export=true&group=myAppGroup&interface=org.apache.dubbo.DubboDemoProvider.Test&loadbalance=random&max-server-recv-msg-size=4mib&max-server-send-msg-size=&metadata-type=local&methods=SayHello&module=opensource&nacos.category=providers&name=myApp&organization=dubbo&owner=laurence&param.sign=&path=%2Forg.apache.dubbo.DubboDemoProvider.Test&pid=31464&protocol=dubbo&registry=nacos&registry.role=3&release=dubbo-golang-3.0.4&retries=&serialization=&service.filter=echo%2Cmetrics%2Ctoken%2Caccesslog%2Ctps%2Cgeneric_service%2Cexecute%2Cpshutdown&side=provider&timestamp=1704804029&tps.limit.interval=&tps.limit.rate=&tps.limit.rejected.handler=&tps.limit.strategy=&tps.limiter=&version=myversion&warmup=}
+2024-01-09 20:40:42     INFO    dubbo/dubbo_protocol.go:99      [DUBBO Protocol] Refer service: dubbo://192.168.123.192:20000/org.apache.dubbo.DubboDemoProvider.Test?accesslog=&app.version=myversion&application=myApp&async=false&auth=&bean.name=DubboDemoProvider&cluster=failover&config.tracing=&environment=pro&execute.limit=&execute.limit.rejected.handler=&export=true&generic=&group=myAppGroup&interface=org.apache.dubbo.DubboDemoProvider.Test&loadbalance=random&max-server-recv-msg-size=4mib&max-server-send-msg-size=&metadata-type=local&methods=SayHello&module=opensource&nacos.category=providers&name=myApp&organization=dubbo&owner=laurence&param.sign=&path=%2Forg.apache.dubbo.DubboDemoProvider.Test&pid=31464&protocol=dubbo&provided-by=&reference.filter=cshutdown&registry=nacos&registry.role=3&release=dubbo-golang-3.0.4&retries=0&serialization=&service.filter=echo%2Cmetrics%2Ctoken%2Caccesslog%2Ctps%2Cgeneric_service%2Cexecute%2Cpshutdown&side=provider&sticky=false&timestamp=1704804029&tps.limit.interval=&tps.limit.rate=&tps.limit.rejected.handler=&tps.limit.strategy=&tps.limiter=&version=myversion&warmup=
+2024-01-09 20:40:42     WARN    tag/router.go:87        config center does not start, please check if the configuration center has been properly configured in dubbogo.yml
+2024-01-09 20:40:42     WARN    condition/dynamic_router.go:127 config center does not start, please check if the configuration center has been properly configured in dubbogo.yml
+2024-01-09 20:40:42     WARN    condition/dynamic_router.go:177 condition router get providerApplication is empty, will not subscribe to provider app rules.
+2024-01-09 20:40:42     INFO    nacos/registry.go:118   [Nacos Registry] Registry instance with param = {Ip:192.168.123.192 Port:80 Weight:1 Enable:true Healthy:true Metadata:map[app.version:myversion application:myApp async:false bean.name:DubboDemoProvider cluster:failover config.tracing: environment:pro generic: group:myAppGroup interface:org.apache.dubbo.DubboDemoProvider.Test loadbalance: metadata-type:local methods: module:opensource nacos.category:consumers name:myApp organization:dubbo owner:laurence path:/org.apache.dubbo.DubboDemoProvider.Test protocol:dubbo provided-by: reference.filter:cshutdown registry.role:0 release:dubbo-golang-3.0.4 retries:0 serialization: side:consumer sticky:false timestamp:1704804042 version:myversion] ClusterName: ServiceName:consumers:org.apache.dubbo.DubboDemoProvider.Test:myversion:myAppGroup GroupName:myGroup Ephemeral:true}
+2024/01/09 20:40:46 client response result: Hello, this request cost 4s
+2024/01/09 20:40:49 client response result: Hello, this request cost 3s
+2024/01/09 20:40:56 client response result: Hello, this request cost 7s
+2024/01/09 20:41:03 client response result: Hello, this request cost 7s
+2024/01/09 20:41:12 client response result: Hello, this request cost 9s
+2024/01/09 20:41:19 client response result: Hello, this request cost 7s
+2024/01/09 20:41:27 client response result: Hello, this request cost 8s
+2024/01/09 20:41:32 client response result: Hello, this request cost 5s
+2024/01/09 20:41:38 client response result: Hello, this request cost 6s
+2024/01/09 20:41:43 client response result: Hello, this request cost 5s
+2024/01/09 20:41:48 client response result: Hello, this request cost 5s
+2024/01/09 20:41:56 client response result: Hello, this request cost 8s
+2024-01-09 20:41:56     WARN    getty/getty_client.go:269       session {client:TCP_CLIENT:5:192.168.123.192:17947<->192.168.123.192:20000}, Read Bytes: 393, Write Bytes: 389, Read Pkgs: 4, Write Pkgs: 4, [session.WritePkg] @s.Connection.Write(pkg:[]byte{0xda, 0xbb, 0xc2, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x4e, 0x0, 0x0, 0x1, 0x41, 0x5, 0x32, 0x2e, 0x30, 0x2e, 0x32, 0x30, 0x27, 0x6f, 0x72, 0x67, 0x2e, 0x61, 0x70, 0x61, 0x63, 0x68, 0x65, 0x2e, 0x64, 0x75, 0x62, 0x62, 0x6f, 0x2e, 0x44, 0x75, 0x62, 0x62, 0x6f, 0x44, 0x65, 0x6d, 0x6f, 0x50, 0x72, 0x6f, 0x76, 0x69, 0x64, 0x65, 0x72, 0x2e, 0x54, 0x65, 0x73, 0x74, 0x9, 0x6d, 0x79, 0x76, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x8, 0x53, 0x61, 0x79, 0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x1f, 0x4c, 0x6f, 0x72, 0x67, 0x2f, 0x61, 0x70, 0x61, 0x63, 0x68, 0x65, 0x2f, 0x64, 0x75, 0x62, 0x62, 0x6f, 0x2f, 0x44, 0x75, 0x62, 0x62, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x3b, 0x43, 0x1d, 0x6f, 0x72, 0x67, 0x2e, 0x61, 0x70, 0x61, 0x63, 0x68, 0x65, 0x2e, 0x64, 0x75, 0x62, 0x62, 0x6f, 0x2e, 0x44, 0x75, 0x62, 0x62, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x91, 0x7, 0x72, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x60, 0x48, 0x4, 0x63, 0x6f, 0x73, 0x74, 0x2, 0x36, 0x73, 0x5a, 0x48, 0x9, 0x69, 0x6e, 0x74, 0x65, 0x72, 0x66, 0x61, 0x63, 0x65, 0x30, 0x27, 0x6f, 0x72, 0x67, 0x2e, 0x61, 0x70, 0x61, 0x63, 0x68, 0x65, 0x2e, 0x64, 0x75, 0x62, 0x62, 0x6f, 0x2e, 0x44, 0x75, 0x62, 0x62, 0x6f, 0x44, 0x65, 0x6d, 0x6f, 0x50, 0x72, 0x6f, 0x76, 0x69, 0x64, 0x65, 0x72, 0x2e, 0x54, 0x65, 0x73, 0x74, 0x5, 0x67, 0x72, 0x6f, 0x75, 0x70, 0xa, 0x6d, 0x79, 0x41, 0x70, 0x70, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x7, 0x76, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x9, 0x6d, 0x79, 0x76, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x7, 0x74, 0x69, 0x6d, 0x65, 0x6f, 0x75, 0x74, 0x1, 0x30, 0x5, 0x61, 0x73, 0x79, 0x6e, 0x63, 0x5, 0x66, 0x61, 0x6c, 0x73, 0x65, 0xb, 0x65, 0x6e, 0x76, 0x69, 0x72, 0x6f, 0x6e, 0x6d, 0x65, 0x6e, 0x74, 0x3, 0x70, 0x72, 0x6f, 0x4, 0x70, 0x61, 0x74, 0x68, 0x30, 0x27, 0x6f, 0x72, 0x67, 0x2e, 0x61, 0x70, 0x61, 0x63, 0x68, 0x65, 0x2e, 0x64, 0x75, 0x62, 0x62, 0x6f, 0x2e, 0x44, 0x75, 0x62, 0x62, 0x6f, 0x44, 0x65, 0x6d, 0x6f, 0x50, 0x72, 0x6f, 0x76, 0x69, 0x64, 0x65, 0x72, 0x2e, 0x54, 0x65, 0x73, 0x74, 0x5a}) = err:write tcp 192.168.123.192:17947->192.168.123.192:20000: i/o timeout
+github.com/apache/dubbo-getty.(*gettyTCPConn).send
+        C:/Users/ruben/Desktop/dubbo-demo/vendor/github.com/apache/dubbo-getty/connection.go:329
+github.com/apache/dubbo-getty.(*session).WritePkg
+        C:/Users/ruben/Desktop/dubbo-demo/vendor/github.com/apache/dubbo-getty/session.go:408
+dubbo.apache.org/dubbo-go/v3/remoting/getty.(*Client).transfer
+        C:/Users/ruben/Desktop/dubbo-demo/vendor/dubbo.apache.org/dubbo-go/v3/remoting/getty/getty_client.go:269
+dubbo.apache.org/dubbo-go/v3/remoting/getty.(*Client).Request
+        C:/Users/ruben/Desktop/dubbo-demo/vendor/dubbo.apache.org/dubbo-go/v3/remoting/getty/getty_client.go:207
+dubbo.apache.org/dubbo-go/v3/remoting.(*ExchangeClient).Request
+        C:/Users/ruben/Desktop/dubbo-demo/vendor/dubbo.apache.org/dubbo-go/v3/remoting/exchange_client.go:131
+dubbo.apache.org/dubbo-go/v3/protocol/dubbo.(*DubboInvoker).Invoke
+        C:/Users/ruben/Desktop/dubbo-demo/vendor/dubbo.apache.org/dubbo-go/v3/protocol/dubbo/dubbo_invoker.go:153
+dubbo.apache.org/dubbo-go/v3/filter/graceful_shutdown.(*consumerGracefulShutdownFilter).Invoke
+        C:/Users/ruben/Desktop/dubbo-demo/vendor/dubbo.apache.org/dubbo-go/v3/filter/graceful_shutdown/consumer_filter.go:66
+dubbo.apache.org/dubbo-go/v3/protocol/protocolwrapper.(*FilterInvoker).Invoke
+        C:/Users/ruben/Desktop/dubbo-demo/vendor/dubbo.apache.org/dubbo-go/v3/protocol/protocolwrapper/protocol_filter_wrapper.go:127 
+dubbo.apache.org/dubbo-go/v3/cluster/cluster/failover.(*failoverClusterInvoker).Invoke
+        C:/Users/ruben/Desktop/dubbo-demo/vendor/dubbo.apache.org/dubbo-go/v3/cluster/cluster/failover/cluster_invoker.go:86
+dubbo.apache.org/dubbo-go/v3/proxy.DefaultProxyImplementFunc.func1.1
+        C:/Users/ruben/Desktop/dubbo-demo/vendor/dubbo.apache.org/dubbo-go/v3/proxy/proxy.go:202
+main.main
+        C:/Users/ruben/Desktop/dubbo-demo/cmd/client/client.go:35
+runtime.main
+        C:/Users/ruben/scoop/apps/go/current/src/runtime/proc.go:267
+runtime.goexit
+        C:/Users/ruben/scoop/apps/go/current/src/runtime/asm_amd64.s:1650
+2024-01-09 20:41:56     WARN    proxy/proxy.go:212      [CallProxy] received rpc err: Failed to invoke the method SayHello in the service org.apache.dubbo.DubboDemoProvider.Test. Tried 0 times of the providers [dubbo://:@192.168.123.192:20000/?interface=org.apache.dubbo.DubboDemoProvider.Test&group=myAppGroup&version=myversion] (1/1)from the registry nacos://127.0.0.1:8848?nacos.access=&nacos.group=myGroup&nacos.namespaceId=&nacos.password=&nacos.secret=&nacos.timeout=5s&nacos.username=&registry=nacos&registry.group=myGroup&registry.label=true&registry.namespace=&registry.preferred=false&registry.role=0&registry.timeout=5s&registry.ttl=15m&registry.weight=0&registry.zone=&remote-client-name=dubbo.registries-nacos-127.0.0.1%3A8848&simplified=false on the consumer 192.168.123.192 using the dubbo version 3.0.4. Last error is write tcp 192.168.123.192:17947->192.168.123.192:20000: i/o timeout.: write tcp 192.168.123.192:17947->192.168.123.192:20000: i/o timeout
+panic: write tcp 192.168.123.192:17947->192.168.123.192:20000: i/o timeout
+
+goroutine 1 [running]:
+main.main()
+        C:/Users/ruben/Desktop/dubbo-demo/cmd/client/client.go:37 +0x25a
+exit status 2
